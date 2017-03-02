@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="rootContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="root-container" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.si3.ihm.projet.ContactController">
+    <top>
+        <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="66.0" prefWidth="1024.0" styleClass="navigation-bar" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="310.0">
+                    <children>
+                        <ImageView fx:id="homeViewImage" fitHeight="74.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="/images/logo.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="homeViewLabel" prefHeight="61.0" prefWidth="100.0" styleClass="store-name" text="Nom du magasin" wrapText="true">
+                            <HBox.margin>
+                                <Insets bottom="5.0" left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </HBox>
+                <MenuBar fx:id="menuBar" prefHeight="66.0" prefWidth="668.0" style="-fx-padding: 10;">
+                    <menus>
+                        <Menu fx:id="topMenuProduct" mnemonicParsing="false">
+                            <items>
+                                <MenuItem fx:id="productMenuView" mnemonicParsing="false" text="Menus" />
+                                <MenuItem fx:id="productStarterView" mnemonicParsing="false" text="Entrées" />
+                                <MenuItem fx:id="productMealView" mnemonicParsing="false" text="Plats" />
+                                <MenuItem fx:id="productFinisherView" mnemonicParsing="false" text="Desserts" />
+                            </items>
+                            <graphic>
+                                <Label fx:id="productView" prefHeight="36.0" prefWidth="75.0" styleClass="menu-label-top-level" text="Produits" wrapText="true">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                            <graphic>
+                                <Label prefHeight="58.0" prefWidth="137.0" styleClass="menu-label-top-level" text="Notre Restaurant" wrapText="true">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </graphic>
+                        </Menu>
+                        <Menu fx:id="topMenuAbout" mnemonicParsing="false">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="A Propos" />
+                            </items>
+                            <graphic>
+                                <Label fx:id="aboutView" prefHeight="36.0" prefWidth="109.0" styleClass="menu-label-top-level" text="Nous Trouver" wrapText="true">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </graphic>
+                        </Menu>
+                        <Menu mnemonicParsing="false">
+                            <graphic>
+                                <Label fx:id="topMenuDiscounts" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans">
+                                    <font>
+                                        <Font size="15.0" />
+                                    </font>
+                                </Label>
+                            </graphic>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+                <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="66.0" prefWidth="361.0">
+                    <children>
+                        <TextField prefHeight="38.0" prefWidth="196.0" promptText="Search" />
+                        <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="/images/search.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="48.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
+            <children>
+                <Hyperlink fx:id="contactView" text="Nous Contacter &gt;" />
+                <Region prefHeight="200.0" prefWidth="200.0" />
+                <Hyperlink fx:id="mentionsView" text="Mentions Légales &gt;" />
+            </children>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Nous Contacter">
+                            <font>
+                                <Font name="Lato Regular" size="42.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="10.0" />
+                            </VBox.margin>
+                        </Label>
+                        <Separator maxWidth="-Infinity" minWidth="-Infinity" prefWidth="325.0" />
+                        <Label alignment="CENTER" prefHeight="94.0" prefWidth="626.0" text="Une question ? Un problème ? Contactez-nous maintenant via le formulaire ci-dessous. Nous nous ferons un plaisir de répondre à toutes vos questions et demandes d'informations dans les plus brefs délais." textAlignment="JUSTIFY" textFill="#777777" wrapText="true">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets bottom="10.0" left="10.0" />
+                            </HBox.margin>
+                            <children>
+                                <Label text="Adresse De Contact">
+                                    <font>
+                                        <Font size="25.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="15.0" top="15.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Label text="Pour toute demande de contact ne passant pas par mail, nous mettons à votre disposition ci-dessous des moyens alternatifs pour nous contacter. Nous ne revendons votre adresse, mail ou téléphone à aucune source extérieure." textAlignment="JUSTIFY" textFill="#777777" wrapText="true">
+                                    <font>
+                                        <Font name="Lato Regular" size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="15.0" right="15.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Separator prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="15.0" right="15.0" />
+                                    </VBox.margin>
+                                </Separator>
+                                <VBox prefHeight="77.0" prefWidth="502.0">
+                                    <children>
+                                        <Label text="930 Route des Colles, 06410">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Lato Regular" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Biot">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Lato Regular" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="France">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Lato Regular" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <Separator prefWidth="200.0">
+                                    <VBox.margin>
+                                        <Insets bottom="10.0" left="15.0" right="15.0" />
+                                    </VBox.margin>
+                                </Separator>
+                                <VBox prefHeight="103.0" prefWidth="502.0">
+                                    <children>
+                                        <Label text="E: email-du@magasin.fr">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Lato Regular" size="16.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="T: +33 (0)6 12 34 56 78">
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font name="Lato Regular" size="16.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                            <children>
+                                <TextField promptText="Entrez votre nom..." styleClass="text-field-contact">
+                                    <VBox.margin>
+                                        <Insets left="15.0" right="15.0" top="10.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField promptText="Entrez votre prénom..." styleClass="text-field-contact">
+                                    <VBox.margin>
+                                        <Insets left="15.0" right="15.0" top="15.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <TextField promptText="Entrez votre mail..." styleClass="text-field-contact">
+                                    <VBox.margin>
+                                        <Insets left="15.0" right="15.0" top="15.0" />
+                                    </VBox.margin>
+                                </TextField>
+                                <TextArea prefHeight="200.0" prefWidth="200.0" promptText="Entrez votre message..." styleClass="text-area-contact">
+                                    <VBox.margin>
+                                        <Insets left="15.0" right="15.0" top="15.0" />
+                                    </VBox.margin>
+                                </TextArea>
+                                <HBox>
+                                    <VBox.margin>
+                                        <Insets left="15.0" right="15.0" top="10.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Region prefHeight="37.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                        <Button fx:id="buttonSendMail" alignment="CENTER" mnemonicParsing="false" prefHeight="37.0" prefWidth="235.0">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="15.0" right="15.0" top="10.0" />
+                                            </VBox.margin>
+                                            <graphic>
+                                                <HBox fx:id="sendMail" alignment="CENTER">
+                                                    <children>
+                                                        <ImageView fx:id="imageSendMail" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="/images/sent-mail.png" />
+                                                            </image>
+                                                            <HBox.margin>
+                                                                <Insets right="15.0" />
+                                                            </HBox.margin>
+                                                        </ImageView>
+                                                        <Label fx:id="textSendMail" text="ENVOYER" />
+                                                    </children>
+                                                </HBox>
+                                            </graphic>
+                                        </Button>
+                                        <Region prefHeight="37.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets right="10.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
