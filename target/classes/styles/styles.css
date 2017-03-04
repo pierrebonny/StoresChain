@@ -12,7 +12,6 @@
 .root-container {
     -fx-background-color: linear-gradient(from 30% 45% to 75% 90%,rgba(0,0,0,0), #8ec64e 0%, #41aba0 100%) repeat scroll 0 0;
 }
-
 .label {
     -fx-font-family: "Lato";
     -fx-text-fill: #333333;
