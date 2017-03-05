@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="rootContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="root-container" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="rootContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1024.0" styleClass="root-container" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.BaseWindowController">
    <top>
       <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="66.0" prefWidth="1024.0" styleClass="navigation-bar" BorderPane.alignment="CENTER">
          <children>
@@ -44,28 +44,20 @@
                <menus>
                   <Menu fx:id="topMenuProduct" mnemonicParsing="false">
                      <items>
-                        <MenuItem fx:id="productMenuView" mnemonicParsing="false" text="Menus" />
-                        <MenuItem fx:id="productStarterView" mnemonicParsing="false" text="Entrées" />
-                        <MenuItem fx:id="productMealView" mnemonicParsing="false" text="Plats" />
-                        <MenuItem fx:id="productFinisherView" mnemonicParsing="false" text="Desserts" />
+                        <MenuItem fx:id="productMenuView" mnemonicParsing="false" onMenuValidation="#openMenus" text="Menus" />
+                        <MenuItem fx:id="productStarterView" mnemonicParsing="false" onMenuValidation="#openEntrees" text="Entrées" />
+                        <MenuItem fx:id="productMealView" mnemonicParsing="false" onMenuValidation="#openPlats" text="Plats" />
+                        <MenuItem fx:id="productFinisherView" mnemonicParsing="false" onAction="#openDesserts" text="Desserts" />
                      </items>
                      <graphic>
-                        <Label fx:id="productView" prefHeight="36.0" prefWidth="75.0" styleClass="menu-label-top-level" text="Produits" wrapText="true">
+                        <Label fx:id="productView" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="92.0" styleClass="menu-label-top-level" text="Produits" wrapText="true">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Label>
                      </graphic>
                   </Menu>
-                  <Menu mnemonicParsing="false">
-                     <graphic>
-                        <Label prefHeight="58.0" prefWidth="137.0" styleClass="menu-label-top-level" text="Notre Restaurant" wrapText="true">
-                           <font>
-                              <Font size="15.0" />
-                           </font>
-                        </Label>
-                     </graphic>
-                  </Menu>
+                  <Menu mnemonicParsing="false" />
                   <Menu fx:id="topMenuAbout" mnemonicParsing="false">
                      <items>
                         <MenuItem mnemonicParsing="false" text="A Propos" />

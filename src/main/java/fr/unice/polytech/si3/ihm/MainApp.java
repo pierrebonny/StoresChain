@@ -1,6 +1,8 @@
 package fr.unice.polytech.si3.ihm;
 
+import fr.unice.polytech.si3.ihm.controller.BaseWindowController;
 import fr.unice.polytech.si3.ihm.controller.HomeController;
+import fr.unice.polytech.si3.ihm.controller.ProductWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,6 +18,7 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private HomeController homeController = new HomeController();
+    private ProductWindowController productWindowController = new ProductWindowController();
 
     public static void main(String[] args) throws Exception {
         launch(args);
@@ -27,7 +30,8 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("AddressApp");
 
         initRootLayout();
-        homeController.showHomeOverview(rootLayout);
+        //homeController.showHomeOverview(rootLayout);
+        productWindowController.showProductOverview(rootLayout);
     }
 
     /**
@@ -43,23 +47,24 @@ public class MainApp extends Application {
             Scene scene = new Scene(rootLayout);
             primaryStage.setScene(scene);
             primaryStage.show();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     /**
-     * Shows the person overview inside the root layout.
+     * Shows the overview inside the root layout.
      */
     public void showPersonOverview() {
         try {
-            // Load person overview.
+            // Load overview.
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("/fxml/homeView.fxml"));
-            BorderPane personOverview = (BorderPane) loader.load();
+            BorderPane overview = (BorderPane) loader.load();
 
-            // Set person overview into the center of root layout.
-            rootLayout.setCenter(personOverview);
+            // Set overview into the center of root layout.
+            rootLayout.setCenter(overview);
         } catch (IOException e) {
             e.printStackTrace();
         }
