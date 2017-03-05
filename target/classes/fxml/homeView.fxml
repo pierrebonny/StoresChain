@@ -26,7 +26,7 @@
       </VBox>
    </center>
    <left>
-      <ImageView fx:id="previousImage" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#changePicture" pickOnBounds="true" preserveRatio="true" styleClass="navigation-arrows, navigation-arrow-left" BorderPane.alignment="CENTER">
+      <ImageView fx:id="previousImage" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#changePictureLeft" pickOnBounds="true" preserveRatio="true" styleClass="navigation-arrows, navigation-arrow-left" BorderPane.alignment="CENTER">
          <image>
             <Image url="@/images/left-arrow.png" />
          </image>
@@ -36,7 +36,7 @@
       </ImageView>
    </left>
    <right>
-      <ImageView fx:id="nextImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="navigation-arrows, navigation-arrow-right" BorderPane.alignment="CENTER">
+      <ImageView fx:id="nextImage" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#changePictureRight" pickOnBounds="true" preserveRatio="true" styleClass="navigation-arrows, navigation-arrow-right" BorderPane.alignment="CENTER">
          <image>
             <Image url="@/images/right-arrow.png" />
          </image>

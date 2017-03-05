@@ -18,7 +18,6 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private HomeController homeController = new HomeController();
-    private ProductWindowController productWindowController = new ProductWindowController();
 
     public static void main(String[] args) throws Exception {
         launch(args);
@@ -30,8 +29,7 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("AddressApp");
 
         initRootLayout();
-        //homeController.showHomeOverview(rootLayout);
-        productWindowController.showProductOverview(rootLayout);
+        homeController.showHomeOverview(rootLayout);
     }
 
     /**
@@ -54,45 +52,10 @@ public class MainApp extends Application {
     }
 
     /**
-     * Shows the overview inside the root layout.
-     */
-    public void showPersonOverview() {
-        try {
-            // Load overview.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("/fxml/homeView.fxml"));
-            BorderPane overview = (BorderPane) loader.load();
-
-            // Set overview into the center of root layout.
-            rootLayout.setCenter(overview);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    /**
      * Returns the main stage.
      * @return
      */
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-
-    /*public void start(Stage stage) throws Exception {
-
-        log.info("Starting Hello JavaFX and Maven demonstration application");
-
-        String fxmlFile = "/fxml/baseWindow.fxml";
-        log.debug("Loading FXML for main view from: {}", fxmlFile);
-        FXMLLoader loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode, 400, 200);
-        scene.getStylesheets().add("/styles/styles.css");
-
-        stage.setTitle("test");
-        stage.setScene(scene);
-        stage.show();
-    }*/
 }

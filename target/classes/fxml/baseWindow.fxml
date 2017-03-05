@@ -22,12 +22,12 @@
          <children>
             <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="310.0">
                <children>
-                  <ImageView fx:id="homeViewImage" fitHeight="74.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="homeViewImage" fitHeight="74.0" fitWidth="184.0" onMouseClicked="#goToWelcomeWindow" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@/images/logo.png" />
                      </image>
                   </ImageView>
-                  <Label fx:id="homeViewLabel" prefHeight="61.0" prefWidth="100.0" styleClass="store-name" text="Nom du magasin" wrapText="true">
+                  <Label fx:id="homeViewLabel" onMouseClicked="#goToWelcomeWindow" prefHeight="61.0" prefWidth="100.0" styleClass="store-name" text="Nom du magasin" wrapText="true">
                      <HBox.margin>
                         <Insets bottom="5.0" left="20.0" />
                      </HBox.margin>
@@ -44,10 +44,12 @@
                <menus>
                   <Menu fx:id="topMenuProduct" mnemonicParsing="false">
                      <items>
-                        <MenuItem fx:id="productMenuView" mnemonicParsing="false" onMenuValidation="#openMenus" text="Menus" />
-                        <MenuItem fx:id="productStarterView" mnemonicParsing="false" onMenuValidation="#openEntrees" text="Entrées" />
-                        <MenuItem fx:id="productMealView" mnemonicParsing="false" onMenuValidation="#openPlats" text="Plats" />
+                        <MenuItem fx:id="productMenuView" mnemonicParsing="false" onAction="#openMenus" text="Menus" />
+                        <MenuItem fx:id="productStarterView" mnemonicParsing="false" onAction="#openEntrees" text="Entrées" />
+                        <MenuItem fx:id="productMealView" mnemonicParsing="false" onAction="#openPlats" text="Plats" />
                         <MenuItem fx:id="productFinisherView" mnemonicParsing="false" onAction="#openDesserts" text="Desserts" />
+                        <MenuItem fx:id="BeverageView" mnemonicParsing="false" onAction="#openBoissons" text="Boissons" />
+                        <MenuItem fx:id="OffersView" mnemonicParsing="false" onAction="#openBonPlans" text="Bons Plans" />
                      </items>
                      <graphic>
                         <Label fx:id="productView" alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="92.0" styleClass="menu-label-top-level" text="Produits" wrapText="true">
@@ -57,7 +59,14 @@
                         </Label>
                      </graphic>
                   </Menu>
-                  <Menu mnemonicParsing="false" />
+                  <Menu mnemonicParsing="false">
+                     <graphic>
+                        <Label prefHeight="36.0" prefWidth="140.0" styleClass="menu-label-top-level" text="Qui Sommes Nous ?" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </graphic></Menu>
                   <Menu fx:id="topMenuAbout" mnemonicParsing="false">
                      <items>
                         <MenuItem mnemonicParsing="false" text="A Propos" />
@@ -72,7 +81,7 @@
                   </Menu>
                   <Menu mnemonicParsing="false">
                      <graphic>
-                        <Label fx:id="topMenuDiscounts" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans">
+                        <Label fx:id="topMenuDiscounts" onMouseClicked="#openBonPlans" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -102,7 +111,11 @@
          <children>
             <Hyperlink fx:id="contactView" text="Nous Contacter &gt;" />
             <Region prefHeight="200.0" prefWidth="200.0" />
-            <Hyperlink fx:id="mentionsView" text="Mentions Légales &gt;" />
+            <Hyperlink fx:id="contactView1" layoutX="315.0" layoutY="23.0" onMouseClicked="#openJoinUs" text="Nous Rejoindre &gt;" />
+            <Hyperlink fx:id="mentionsView" alignment="TOP_RIGHT" contentDisplay="RIGHT" text="Mentions Légales &gt;" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="220.0" />
+               </HBox.margin></Hyperlink>
          </children>
       </HBox>
    </bottom>

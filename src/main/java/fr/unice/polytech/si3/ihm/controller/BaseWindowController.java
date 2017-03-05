@@ -2,10 +2,13 @@ package fr.unice.polytech.si3.ihm.controller;
 
 import fr.unice.polytech.si3.ihm.MainApp;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -60,7 +63,7 @@ public class BaseWindowController {
     @FXML
     void openDesserts(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MainApp.class.getResource("/fxml/productsWindow.fxml"));
+        loader.setLocation(MainApp.class.getResource("/fxml/dessertWindow.fxml"));
         try {
             BorderPane overview = (BorderPane) loader.load();
             rootContainer.setCenter(overview);
@@ -72,16 +75,89 @@ public class BaseWindowController {
 
     @FXML
     void openEntrees(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/entréesWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void openMenus(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/menuWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void openPlats(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/platsWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openBonPlans(Event event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/bonPlansWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openBoissons(Event event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/boissonWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void goToWelcomeWindow(MouseEvent mouseEvent) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/homeView.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void openJoinUs(MouseEvent event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/candidatureWindow.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
