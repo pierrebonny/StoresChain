@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -50,7 +51,11 @@
                   <Label alignment="CENTER" layoutX="10.0" layoutY="11.0" prefHeight="32.0" prefWidth="142.0" text="Email Adress" GridPane.rowIndex="5" />
                   <TextField prefHeight="38.0" prefWidth="507.0" promptText="Your lastname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField layoutX="153.0" layoutY="10.0" prefHeight="38.0" prefWidth="507.0" promptText="Your age" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField layoutX="153.0" layoutY="44.0" prefHeight="38.0" prefWidth="507.0" promptText="Your firstname" GridPane.columnIndex="1" />
+                  <TextField layoutX="153.0" layoutY="44.0" prefHeight="38.0" prefWidth="507.0" promptText="Your firstname" GridPane.columnIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
                   <TextField layoutX="153.0" layoutY="10.0" prefHeight="38.0" prefWidth="507.0" promptText="your email adress" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                   <TextField layoutX="153.0" layoutY="112.0" prefHeight="38.0" prefWidth="507.0" promptText="your phone number" GridPane.columnIndex="1" GridPane.rowIndex="6" />
                   <Label alignment="CENTER" layoutX="10.0" layoutY="147.0" prefHeight="32.0" prefWidth="142.0" text="Studies Level" GridPane.rowIndex="8" />
@@ -98,6 +103,9 @@
                   <Label alignment="CENTER" layoutX="10.0" layoutY="148.0" prefHeight="32.0" prefWidth="142.0" text="Desired Work Period" GridPane.rowIndex="7" />
                   <TextField layoutX="153.0" layoutY="147.0" prefHeight="38.0" prefWidth="507.0" promptText="MM-AAAA till MM-AAAA " GridPane.columnIndex="1" GridPane.rowIndex="7" />
                </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </GridPane>
             <Label alignment="CENTER" layoutX="25.0" layoutY="375.0" prefHeight="32.0" prefWidth="142.0" text="Motivations" />
             <TextArea layoutX="168.0" layoutY="320.0" prefHeight="171.0" prefWidth="507.0" promptText="Explain why you want to work for us and why you think that we should take you" />

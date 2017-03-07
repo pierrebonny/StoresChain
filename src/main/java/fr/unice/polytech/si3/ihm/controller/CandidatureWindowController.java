@@ -20,32 +20,6 @@ public class CandidatureWindowController {
 
     @FXML
     public BorderPane rootContainer = new BorderPane();
-    private ObservableList<String> studiesOptions =
-            FXCollections.observableArrayList(
-                    "Under Bac",
-                    "Bac",
-                    "Bac+2",
-                    "Bac+3",
-                    "Bac+5",
-                    "Bac+7"
-            );
-
-    private ObservableList<String> positionOptions =
-            FXCollections.observableArrayList(
-                    "Waiter",
-                    "Cook",
-                    "Order Picker",
-                    "Franchise Director",
-                    "Cleaning Guy"
-            );
-
-    private ObservableList<String> mobilityOptions =
-            FXCollections.observableArrayList(
-                    "my department",
-                    "my region",
-                    "France",
-                    "no matter"
-            );
 
     @FXML
     private ComboBox<String> studiesComboBox = new ComboBox<>();
@@ -64,9 +38,6 @@ public class CandidatureWindowController {
     }
 
     public void start(){
-        mobilityComboBox.setItems(mobilityOptions);
-        studiesComboBox.setItems(studiesOptions);
-        positionComboBox.setItems(positionOptions);
     }
 
     @FXML

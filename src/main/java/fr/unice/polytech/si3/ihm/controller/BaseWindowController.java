@@ -8,7 +8,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -89,7 +88,7 @@ public class BaseWindowController {
     @FXML
     void openMenus(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MainApp.class.getResource("/fxml/menuWindow.fxml"));
+        loader.setLocation(MainApp.class.getResource("/fxml/productMenuWindow.fxml"));
         try {
             BorderPane overview = (BorderPane) loader.load();
             rootContainer.setCenter(overview);
@@ -102,7 +101,7 @@ public class BaseWindowController {
     @FXML
     void openPlats(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(MainApp.class.getResource("/fxml/platsWindow.fxml"));
+        loader.setLocation(MainApp.class.getResource("/fxml/productPlatsWindow.fxml"));
         try {
             BorderPane overview = (BorderPane) loader.load();
             rootContainer.setCenter(overview);

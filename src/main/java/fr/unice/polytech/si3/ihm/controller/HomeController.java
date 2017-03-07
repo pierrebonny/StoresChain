@@ -13,6 +13,8 @@ import javafx.scene.layout.BorderPane;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Pierre on 03/03/2017.
@@ -32,12 +34,18 @@ public class HomeController {
     private ImageView nextImage;
 
     private int count = 0;
+    private List<String> urls = new ArrayList<>();
+    private boolean first = true;
 
     public HomeController() {
         rootContainer = new BorderPane();
         nextImage = new ImageView();
         previousImage = new ImageView();
         carouselImage = new ImageView();
+        urls.add(0, "/images/burger_friends.jpg");
+        urls.add(1, "/images/burger1.jpg");
+        urls.add(2,"/images/burger2.jpg");
+        urls.add(3, "/images/presentation_burger.jpg");
     }
 
     /**
@@ -56,25 +64,34 @@ public class HomeController {
         }
     }
 
-    private void carrousel(){
-        int i = 0;
-        if(i==0){
-            carouselImage.setImage(new Image("/images/burger_friends.jpg"));
-            i++;
-        }
-        else{
-            carouselImage.setImage(new Image("/images/presentation_burger.jpg"));
-            i--;
-        }
-    }
 
     @FXML
     void changePictureLeft(MouseEvent event) {
-        carouselImage.setImage(new Image("/images/presentation_burger.jpg"));
+        if(count == 0){
+            if (first){
+                carouselImage.setImage(new Image(urls.get(urls.size() - 2)));
+                count = urls.size() - 2;
+            }
+            else{
+                carouselImage.setImage(new Image(urls.get(urls.size() - 1)));
+                count = urls.size() - 1;
+            }
+        }
+        else {
+            carouselImage.setImage(new Image(urls.get(count-1)));
+            count--;
+        }
     }
 
     @FXML
     void changePictureRight(MouseEvent event) {
-        carouselImage.setImage(new Image("/images/burger_friends.jpg"));
+        if(count == urls.size() - 1){
+            carouselImage.setImage(new Image(urls.get(0)));
+            count = 0;
+        }
+        else {
+            carouselImage.setImage(new Image(urls.get(count+1)));
+            count++;
+        }
     }
 }
