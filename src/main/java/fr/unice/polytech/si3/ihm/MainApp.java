@@ -18,6 +18,7 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private BorderPane rootLayout;
     private HomeController homeController = new HomeController();
+    private ProductWindowController productWindowController = new ProductWindowController();
 
     public static void main(String[] args) throws Exception {
         launch(args);

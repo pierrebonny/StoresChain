@@ -3,6 +3,7 @@ package fr.unice.polytech.si3.ihm.controller;
 import fr.unice.polytech.si3.ihm.MainApp;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,6 +34,8 @@ public class HomeController {
     @FXML
     private ImageView nextImage;
 
+    private Timeline timeline;
+
     private int count = 0;
     private List<String> urls = new ArrayList<>();
     private boolean first = true;
@@ -44,7 +47,7 @@ public class HomeController {
         carouselImage = new ImageView();
         urls.add(0, "/images/burger_friends.jpg");
         urls.add(1, "/images/burger1.jpg");
-        urls.add(2,"/images/burger2.jpg");
+        urls.add(2, "/images/burger2.jpg");
         urls.add(3, "/images/presentation_burger.jpg");
     }
 

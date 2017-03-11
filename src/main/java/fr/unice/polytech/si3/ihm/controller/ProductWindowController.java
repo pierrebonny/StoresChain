@@ -11,7 +11,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -73,7 +75,28 @@ public class ProductWindowController {
     @FXML
     private Label labelGrid8 = new Label();
 
+    private List<Label> labels = new ArrayList<>();
+    private List<ImageView> images = new ArrayList<>();
+
     public ProductWindowController(){
+        labels.add(0,labelGrid);
+        labels.add(1,labelGrid1);
+        labels.add(2,labelGrid2);
+        labels.add(3,labelGrid3);
+        labels.add(4,labelGrid4);
+        labels.add(5,labelGrid5);
+        labels.add(6,labelGrid6);
+        labels.add(7,labelGrid7);
+        labels.add(8,labelGrid8);
+        images.add(0,imageGrid);
+        images.add(1,imageGrid1);
+        images.add(2,imageGrid2);
+        images.add(3,imageGrid3);
+        images.add(4,imageGrid4);
+        images.add(5,imageGrid5);
+        images.add(6,imageGrid6);
+        images.add(7,imageGrid7);
+        images.add(8,imageGrid8);
     }
 
     /**
@@ -100,7 +123,7 @@ public class ProductWindowController {
 
     @FXML
     void openBonPlans(ActionEvent event) {
-        setAllComponants("/images/label-2016248_1280.png","Bon Plan X");
+        setAllComponants("/images/label-2016248_1280.png","Bon Plan X : Y€");
     }
 
     @FXML
@@ -121,6 +144,16 @@ public class ProductWindowController {
     @FXML
     void openPlats(ActionEvent event) {
         setAllComponants("/images/fast-food.png","Plat X : Y€");
+    }
+
+    @FXML
+    void bas(MouseEvent event) {
+        //TODO
+    }
+
+    @FXML
+    void haut(MouseEvent event) {
+        //TODO
     }
 
     public void setAllComponants(String imageUrl,String text){

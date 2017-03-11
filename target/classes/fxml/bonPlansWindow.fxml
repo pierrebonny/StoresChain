@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="631.0" prefWidth="911.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.BonPlanWindowController">
+<BorderPane prefHeight="631.0" prefWidth="1000.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.BonPlanWindowController">
     <left>
         <VBox id="productVbox" prefHeight="500.0" prefWidth="151.0" BorderPane.alignment="CENTER">
             <children>
@@ -47,12 +46,13 @@
                     <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                             <children>
-                                <Label fx:id="labelGrid" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 2 : 10 €" />
+                                <Label fx:id="labelGrid" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                                 <ImageView fx:id="imageGrid" fitHeight="111.0" fitWidth="191.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
+                        <ImageView fitHeight="70.0" fitWidth="88.0" layoutX="150.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
@@ -62,7 +62,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid1" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 1 : 10 €" />
+                                <Label fx:id="labelGrid1" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane prefHeight="155.0" prefWidth="205.0" GridPane.rowIndex="1">
@@ -72,7 +72,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid2" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 4 : 10 €" />
+                                <Label fx:id="labelGrid2" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -82,12 +82,12 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid3" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 5 : 10 €" />
+                                <Label fx:id="labelGrid3" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                             <children>
-                                <Label fx:id="labelGrid4" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 3 : 10 €" />
+                                <Label fx:id="labelGrid4" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                                 <ImageView fx:id="imageGrid4" fitHeight="111.0" fitWidth="191.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../images/label-2016248_1280.png" />
@@ -102,7 +102,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid5" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 6 : 10 €" />
+                                <Label fx:id="labelGrid5" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
@@ -112,7 +112,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid6" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 7 : 10 €" />
+                                <Label fx:id="labelGrid6" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -122,7 +122,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid7" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 8 : 10 €" />
+                                <Label fx:id="labelGrid7" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -132,7 +132,7 @@
                                         <Image url="@../images/label-2016248_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid8" alignment="CENTER" contentDisplay="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="Dessert 9 : 10 €" />
+                                <Label fx:id="labelGrid8" alignment="CENTER" contentDisplay="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="Bon Plan X : Y €" />
                             </children>
                         </Pane>
                     </children>
@@ -140,12 +140,12 @@
                         <Insets left="20.0" />
                     </padding>
                 </GridPane>
-                <ImageView fitHeight="137.0" fitWidth="140.0" layoutX="613.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="137.0" fitWidth="140.0" layoutX="697.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../images/quality1.jpg" />
                     </image>
                 </ImageView>
-                <Label alignment="TOP_LEFT" layoutX="613.0" layoutY="151.0" prefHeight="224.0" prefWidth="133.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." wrapText="true">
+                <Label alignment="TOP_LEFT" layoutX="697.0" layoutY="151.0" prefHeight="224.0" prefWidth="133.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." wrapText="true">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -153,7 +153,16 @@
                         <Insets left="2.0" top="10.0" />
                     </padding>
                 </Label>
-                <ScrollBar layoutX="567.0" layoutY="14.0" orientation="VERTICAL" prefHeight="582.0" prefWidth="21.0" />
+                <ImageView fx:id="haut" fitHeight="114.0" fitWidth="44.0" layoutX="600.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: invisible">
+                    <image>
+                        <Image url="@../images/haut.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="114.0" fitWidth="44.0" layoutX="600" layoutY="457.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/bas.png" />
+                    </image>
+                </ImageView>
             </children>
         </Pane>
     </center>
