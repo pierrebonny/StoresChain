@@ -73,7 +73,7 @@ public class CarteController {
 
     @FXML
     public void initialize() {
-        File file = new File("/home/jamatofu/Bureau/StoresChain/src/main/resources/map.html");
+        File file = new File("../StoresChain/src/main/resources/map.html");
         WebEngine engine = webView.getEngine();
         engine.load(file.toURI().toString());
 

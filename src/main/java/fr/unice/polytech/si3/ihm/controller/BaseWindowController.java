@@ -1,6 +1,8 @@
 package fr.unice.polytech.si3.ihm.controller;
 
 import fr.unice.polytech.si3.ihm.MainApp;
+import fr.unice.polytech.si3.ihm.model.Entree;
+import fr.unice.polytech.si3.ihm.model.ProductWindowElement;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -14,6 +16,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Pierre on 04/03/2017.
