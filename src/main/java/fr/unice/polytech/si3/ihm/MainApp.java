@@ -1,16 +1,16 @@
 package fr.unice.polytech.si3.ihm;
 
-import fr.unice.polytech.si3.ihm.controller.BaseWindowController;
 import fr.unice.polytech.si3.ihm.controller.HomeController;
 import fr.unice.polytech.si3.ihm.controller.ProductWindowController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
-import javafx.scene.layout.BorderPane;
 
 public class MainApp extends Application {
 
@@ -27,7 +27,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("AddressApp");
+        this.primaryStage.setTitle("Magasin");
 
         initRootLayout();
         homeController.showHomeOverview(rootLayout);

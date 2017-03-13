@@ -70,6 +70,7 @@
                   <Menu fx:id="topMenuAbout" mnemonicParsing="false">
                      <items>
                         <MenuItem mnemonicParsing="false" text="A Propos" />
+                        <MenuItem fx:id="mapView" mnemonicParsing="false" onAction="#openMap" text="Carte" />
                      </items>
                      <graphic>
                         <Label fx:id="aboutView" prefHeight="36.0" prefWidth="109.0" styleClass="menu-label-top-level" text="Nous Trouver" wrapText="true">
@@ -81,7 +82,7 @@
                   </Menu>
                   <Menu mnemonicParsing="false">
                      <graphic>
-                        <Label fx:id="topMenuDiscounts" onMouseClicked="#openBonPlans" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans">
+                        <Label fx:id="topMenuDiscounts" prefHeight="50.0" prefWidth="82.0" styleClass="menu-label-top-level" text="Bon Plans">
                            <font>
                               <Font size="15.0" />
                            </font>

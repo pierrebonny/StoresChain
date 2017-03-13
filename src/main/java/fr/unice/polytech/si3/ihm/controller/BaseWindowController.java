@@ -5,7 +5,10 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.*;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -155,6 +158,18 @@ public class BaseWindowController {
             BorderPane overview = (BorderPane) loader.load();
             rootContainer.setCenter(overview);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void openMap(Event event) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(MainApp.class.getResource("/fxml/map.fxml"));
+        try {
+            BorderPane overview = (BorderPane) loader.load();
+            rootContainer.setCenter(overview);
         } catch (IOException e) {
             e.printStackTrace();
         }
