@@ -72,13 +72,6 @@ public class EntreesWindowController extends ProductWindowController {
 
 
     public EntreesWindowController(){
-        Random random = new Random();
-        List<ProductWindowElement> entrees = new ArrayList<>();
-        for(int i = 0;i<9;i++){
-            ProductWindowElement entree = new Entree(random.nextInt(10),String.valueOf(i));
-            entrees.add(i,entree);
-        }
-        setComponant(entrees);
     }
 
     @Override

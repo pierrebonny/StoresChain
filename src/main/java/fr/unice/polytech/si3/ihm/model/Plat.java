@@ -6,6 +6,6 @@ package fr.unice.polytech.si3.ihm.model;
 public class Plat extends ProductWindowElement {
 
     public Plat(int price,String id) {
-        super("/images/Hamburger.png", price, "Plat " + id + " " + price + "€", id);
+        super("/images/Hamburger.png", price, "Plat " + id + " :" + price + "€", id);
     }
 }

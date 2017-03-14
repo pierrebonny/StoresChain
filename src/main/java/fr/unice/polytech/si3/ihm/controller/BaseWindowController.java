@@ -1,8 +1,7 @@
 package fr.unice.polytech.si3.ihm.controller;
 
 import fr.unice.polytech.si3.ihm.MainApp;
-import fr.unice.polytech.si3.ihm.model.Entree;
-import fr.unice.polytech.si3.ihm.model.ProductWindowElement;
+import fr.unice.polytech.si3.ihm.model.*;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -71,8 +70,16 @@ public class BaseWindowController {
     void openDesserts(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/dessertWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> desserts = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement dessert = new Dessert(random.nextInt(10),String.valueOf(i));
+            desserts.add(i,dessert);
+        }
         try {
             BorderPane overview = (BorderPane) loader.load();
+            DessertsWindowController dessertsWindowController = loader.getController();
+            dessertsWindowController.setComponant(desserts);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {
@@ -84,8 +91,16 @@ public class BaseWindowController {
     void openEntrees(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/entréesWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> entrees = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement entree = new Entree(random.nextInt(10),String.valueOf(i));
+            entrees.add(i,entree);
+        }
         try {
             BorderPane overview = (BorderPane) loader.load();
+            EntreesWindowController entreesController = loader.getController();
+            entreesController.setComponant(entrees);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {
@@ -97,8 +112,16 @@ public class BaseWindowController {
     void openMenus(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/productMenuWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> menus = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement menu = new fr.unice.polytech.si3.ihm.model.Menu(new Entree(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Plat(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Dessert(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Boisson(1+random.nextInt(10),String.valueOf(random.nextInt(10))),String.valueOf(i));
+            menus.add(i,menu);
+        }
         try {
             BorderPane overview = (BorderPane) loader.load();
+            MenuWindowController menuWindowController = loader.getController();
+            menuWindowController.setComponant(menus);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {
@@ -110,8 +133,17 @@ public class BaseWindowController {
     void openPlats(ActionEvent event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/productPlatsWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> plats = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement plat = new Plat(random.nextInt(10),String.valueOf(i));
+            plats.add(i,plat);
+        }
+
         try {
             BorderPane overview = (BorderPane) loader.load();
+            PlatsWindowController platsWindowController = loader.getController();
+            platsWindowController.setComponant(plats);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {
@@ -122,8 +154,16 @@ public class BaseWindowController {
     public void openBonPlans(Event event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/bonPlansWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> bonPlans = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement bonPlan = new BonPlan(random.nextInt(10),String.valueOf(i));
+            bonPlans.add(i,bonPlan);
+        }
         try {
             BorderPane overview = (BorderPane) loader.load();
+            BonPlanWindowController bonPlanWindowController = loader.getController();
+            bonPlanWindowController.setComponant(bonPlans);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {
@@ -134,8 +174,16 @@ public class BaseWindowController {
     public void openBoissons(Event event) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(MainApp.class.getResource("/fxml/boissonWindow.fxml"));
+        Random random = new Random();
+        List<ProductWindowElement> boissons = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement boisson = new Boisson(random.nextInt(10),String.valueOf(i));
+            boissons.add(i,boisson);
+        }
         try {
             BorderPane overview = (BorderPane) loader.load();
+            BoissonWindowController boissonWindowController = loader.getController();
+            boissonWindowController.setComponant(boissons);
             rootContainer.setCenter(overview);
 
         } catch (IOException e) {

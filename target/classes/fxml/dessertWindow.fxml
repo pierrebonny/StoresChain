@@ -46,7 +46,7 @@
                     <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                             <children>
-                                <Label fx:id="labelGrid" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="188.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="188.0" text="Dessert X: Y€" />
                                 <ImageView fx:id="imageGrid" fitHeight="89.0" fitWidth="79.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../images/popsicle-154321_1280.png" />
@@ -61,7 +61,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid1" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="96.0" prefWidth="187.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid1" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="96.0" prefWidth="187.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane prefHeight="155.0" prefWidth="205.0" GridPane.rowIndex="1">
@@ -71,7 +71,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid2" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="97.0" prefWidth="187.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid2" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="97.0" prefWidth="187.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -81,12 +81,12 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid3" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="187.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid3" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="187.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                             <children>
-                                <Label fx:id="labelGrid4" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="186.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid4" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="186.0" text="Dessert X: Y€" />
                                 <ImageView fx:id="imageGrid4" fitHeight="89.0" fitWidth="79.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                         <Image url="@../images/popsicle-154321_1280.png" />
@@ -101,7 +101,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid5" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="186.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid5" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="186.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
@@ -111,7 +111,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid6" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="94.0" prefWidth="188.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid6" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="94.0" prefWidth="188.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -121,7 +121,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid7" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="101.0" prefHeight="94.0" prefWidth="187.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid7" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="94.0" prefWidth="187.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -131,7 +131,7 @@
                                         <Image url="@../images/popsicle-154321_1280.png" />
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid8" alignment="TOP_LEFT" contentDisplay="CENTER" layoutY="99.0" prefHeight="97.0" prefWidth="187.0" text="Dessert X: Y€" />
+                                <Label fx:id="labelGrid8" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="99.0" prefHeight="97.0" prefWidth="187.0" text="Dessert X: Y€" />
                             </children>
                         </Pane>
                     </children>

@@ -88,9 +88,10 @@ public class CandidatureWindowController {
     private List<Boolean> check = new ArrayList<>();
 
     public CandidatureWindowController(){
-        for(int i = 0;i<13;i++){
+        for(int i = 0;i<12;i++){
             check.add(i,false);
         }
+        check.add(12,web.isSelected()||newspapers.isSelected()||othersWeb.isSelected()||tv.isSelected()||adds.isSelected()||dont.isSelected()||other.isSelected());
     }
 
     public void start(){
@@ -132,11 +133,6 @@ public class CandidatureWindowController {
     @FXML
     void check10(ActionEvent event) {
         check.add(2,true);
-    }
-
-    @FXML
-    void check12(ActionEvent event) {
-        check.add(4,true);
     }
 
     @FXML

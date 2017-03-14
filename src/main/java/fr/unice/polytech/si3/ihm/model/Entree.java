@@ -6,6 +6,6 @@ package fr.unice.polytech.si3.ihm.model;
 public class Entree extends ProductWindowElement {
 
     public Entree(int price,String id){
-        super("/images/entrée.png",price,"Entrée "+id+" "+price+"€",id);
+        super("/images/entrée.png",price,"Entrée "+id+": "+price+"€",id);
     }
 }

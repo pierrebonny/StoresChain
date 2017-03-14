@@ -68,7 +68,7 @@ public class Menu extends ProductWindowElement {
     }
 
     public String createText(){
-        return "Menu " + id +": " + this.getPrice() + "€\n"+this.getElement("entrée").getDescription()+"\n"+
+        return "Menu " + this.getId()+": " + this.getPrice() + "€\n"+this.getElement("entrée").getDescription()+"\n"+
                 this.getElement("plat").getDescription()+"\n"+this.getElement("dessert").getDescription()+"\n"+
                 this.getElement("boisson").getDescription();
     }

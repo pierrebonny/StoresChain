@@ -46,7 +46,7 @@ public class HomeController {
         nextImage = new ImageView();
         previousImage = new ImageView();
         carouselImage = new ImageView();
-         carrousel = new CarrouselImage();
+        carrousel = new CarrouselImage();
     }
 
     /**

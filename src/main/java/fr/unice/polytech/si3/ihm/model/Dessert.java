@@ -6,6 +6,6 @@ package fr.unice.polytech.si3.ihm.model;
 public class Dessert extends ProductWindowElement {
 
     public Dessert(int price,String id){
-        super("/images/popsicle-154321_1280.png",price,"Dessert "+id+" "+price+"€",id);
+        super("/images/popsicle-154321_1280.png",price,"Dessert "+id+" :"+price+"€",id);
     }
 }

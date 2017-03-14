@@ -8,6 +8,6 @@ import java.util.Random;
 public class Boisson extends ProductWindowElement {
 
     public Boisson(int price,String id){
-        super("/images/boisson.png",price,"Boisson "+id+" "+price+"€",id);
+        super("/images/boisson.png",price,"Boisson "+id+" :"+price+"€",id);
     }
 }

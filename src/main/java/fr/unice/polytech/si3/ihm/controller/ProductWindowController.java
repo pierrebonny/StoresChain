@@ -175,12 +175,12 @@ public class ProductWindowController {
         labelGrid1.setText(element.get(0).getDescription());
         imageGrid.setImage(new Image(element.get(1).getPictureUrl()));
         labelGrid.setText(element.get(1).getDescription());
-        imageGrid2.setImage(new Image(element.get(2).getPictureUrl()));
-        labelGrid2.setText(element.get(2).getDescription());
-        imageGrid3.setImage(new Image(element.get(3).getPictureUrl()));
-        labelGrid3.setText(element.get(3).getDescription());
-        imageGrid4.setImage(new Image(element.get(4).getPictureUrl()));
-        labelGrid4.setText(element.get(4).getDescription());
+        imageGrid2.setImage(new Image(element.get(3).getPictureUrl()));
+        labelGrid2.setText(element.get(3).getDescription());
+        imageGrid3.setImage(new Image(element.get(4).getPictureUrl()));
+        labelGrid3.setText(element.get(4).getDescription());
+        imageGrid4.setImage(new Image(element.get(2).getPictureUrl()));
+        labelGrid4.setText(element.get(2).getDescription());
         imageGrid5.setImage(new Image(element.get(5).getPictureUrl()));
         labelGrid5.setText(element.get(5).getDescription());
         imageGrid6.setImage(new Image(element.get(6).getPictureUrl()));
