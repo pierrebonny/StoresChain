@@ -1,6 +1,7 @@
 package fr.unice.polytech.si3.ihm.controller;
 
 import fr.unice.polytech.si3.ihm.MainApp;
+import fr.unice.polytech.si3.ihm.model.CarrouselImage;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
@@ -37,18 +38,15 @@ public class HomeController {
     private Timeline timeline;
 
     private int count = 0;
-    private List<String> urls = new ArrayList<>();
     private boolean first = true;
+    private CarrouselImage carrousel;
 
     public HomeController() {
         rootContainer = new BorderPane();
         nextImage = new ImageView();
         previousImage = new ImageView();
         carouselImage = new ImageView();
-        urls.add(0, "/images/burger_friends.jpg");
-        urls.add(1, "/images/burger1.jpg");
-        urls.add(2, "/images/burger2.jpg");
-        urls.add(3, "/images/presentation_burger.jpg");
+        carrousel = new CarrouselImage();
     }
 
     /**
@@ -72,28 +70,28 @@ public class HomeController {
     void changePictureLeft(MouseEvent event) {
         if(count == 0){
             if (first){
-                carouselImage.setImage(new Image(urls.get(urls.size() - 2)));
-                count = urls.size() - 2;
+                carouselImage.setImage(new Image(carrousel.getUrls().get(carrousel.getUrls().size() - 2)));
+                count = carrousel.getUrls().size() - 2;
             }
             else{
-                carouselImage.setImage(new Image(urls.get(urls.size() - 1)));
-                count = urls.size() - 1;
+                carouselImage.setImage(new Image(carrousel.getUrls().get(carrousel.getUrls().size() - 1)));
+                count = carrousel.getUrls().size() - 1;
             }
         }
         else {
-            carouselImage.setImage(new Image(urls.get(count-1)));
+            carouselImage.setImage(new Image(carrousel.getUrls().get(count-1)));
             count--;
         }
     }
 
     @FXML
     void changePictureRight(MouseEvent event) {
-        if(count == urls.size() - 1){
-            carouselImage.setImage(new Image(urls.get(0)));
+        if(count == carrousel.getUrls().size() - 1){
+            carouselImage.setImage(new Image(carrousel.getUrls().get(0)));
             count = 0;
         }
         else {
-            carouselImage.setImage(new Image(urls.get(count+1)));
+            carouselImage.setImage(new Image(carrousel.getUrls().get(count+1)));
             count++;
         }
     }

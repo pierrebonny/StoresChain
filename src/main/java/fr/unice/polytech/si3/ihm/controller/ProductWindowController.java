@@ -1,6 +1,7 @@
 package fr.unice.polytech.si3.ihm.controller;
 
 import fr.unice.polytech.si3.ihm.MainApp;
+import fr.unice.polytech.si3.ihm.model.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,10 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Pierre on 03/03/2017.
@@ -75,28 +73,7 @@ public class ProductWindowController {
     @FXML
     private Label labelGrid8 = new Label();
 
-    private List<Label> labels = new ArrayList<>();
-    private List<ImageView> images = new ArrayList<>();
-
     public ProductWindowController(){
-        labels.add(0,labelGrid);
-        labels.add(1,labelGrid1);
-        labels.add(2,labelGrid2);
-        labels.add(3,labelGrid3);
-        labels.add(4,labelGrid4);
-        labels.add(5,labelGrid5);
-        labels.add(6,labelGrid6);
-        labels.add(7,labelGrid7);
-        labels.add(8,labelGrid8);
-        images.add(0,imageGrid);
-        images.add(1,imageGrid1);
-        images.add(2,imageGrid2);
-        images.add(3,imageGrid3);
-        images.add(4,imageGrid4);
-        images.add(5,imageGrid5);
-        images.add(6,imageGrid6);
-        images.add(7,imageGrid7);
-        images.add(8,imageGrid8);
     }
 
     /**
@@ -118,32 +95,68 @@ public class ProductWindowController {
 
     @FXML
     void openBoissons(ActionEvent event) {
-        setAllComponants("/images/boisson.png","Boisson X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> boissons = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement boisson = new Boisson(random.nextInt(10),String.valueOf(i));
+            boissons.add(i,boisson);
+        }
+        setComponant(boissons);
     }
 
     @FXML
     void openBonPlans(ActionEvent event) {
-        setAllComponants("/images/label-2016248_1280.png","Bon Plan X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> bonPlans = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement bonPlan = new BonPlan(random.nextInt(10),String.valueOf(i));
+            bonPlans.add(i,bonPlan);
+        }
+        setComponant(bonPlans);
     }
 
     @FXML
     void openDesserts(ActionEvent event) {
-        setAllComponants("/images/popsicle-154321_1280.png","Dessert X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> desserts = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement dessert = new Dessert(random.nextInt(10),String.valueOf(i));
+            desserts.add(i,dessert);
+        }
+        setComponant(desserts);
     }
 
     @FXML
     void openEntrees(ActionEvent event) {
-        setAllComponants("/images/entrée.png","Entrée X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> entrees = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement entree = new Entree(random.nextInt(10),String.valueOf(i));
+            entrees.add(i,entree);
+        }
+        setComponant(entrees);
     }
 
     @FXML
     void openMenus(ActionEvent event) {
-        setAllComponants("/images/fast-food.png","Menu X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> menus = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement menu = new Menu(new Entree(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Plat(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Dessert(1+random.nextInt(10),String.valueOf(random.nextInt(10))),new Boisson(1+random.nextInt(10),String.valueOf(random.nextInt(10))),String.valueOf(i));
+            menus.add(i,menu);
+        }
+        setComponant(menus);
     }
 
     @FXML
     void openPlats(ActionEvent event) {
-        setAllComponants("/images/fast-food.png","Plat X : Y€");
+        Random random = new Random();
+        List<ProductWindowElement> plats = new ArrayList<>();
+        for(int i = 0;i<9;i++){
+            ProductWindowElement plat = new Plat(random.nextInt(10),String.valueOf(i));
+            plats.add(i,plat);
+        }
+        setComponant(plats);
     }
 
     @FXML
@@ -156,25 +169,26 @@ public class ProductWindowController {
         //TODO
     }
 
-    public void setAllComponants(String imageUrl,String text){
-        imageGrid.setImage(new Image(imageUrl));
-        labelGrid.setText(text);
-        imageGrid1.setImage(new Image(imageUrl));
-        labelGrid1.setText(text);
-        imageGrid2.setImage(new Image(imageUrl));
-        labelGrid2.setText(text);
-        imageGrid3.setImage(new Image(imageUrl));
-        labelGrid3.setText(text);
-        imageGrid4.setImage(new Image(imageUrl));
-        labelGrid4.setText(text);
-        imageGrid5.setImage(new Image(imageUrl));
-        labelGrid5.setText(text);
-        imageGrid6.setImage(new Image(imageUrl));
-        labelGrid6.setText(text);
-        imageGrid7.setImage(new Image(imageUrl));
-        labelGrid7.setText(text);
-        imageGrid8.setImage(new Image(imageUrl));
-        labelGrid8.setText(text);
+    public void setComponant(List<ProductWindowElement> element){
+
+        imageGrid1.setImage(new Image(element.get(0).getPictureUrl()));
+        labelGrid1.setText(element.get(0).getDescription());
+        imageGrid.setImage(new Image(element.get(1).getPictureUrl()));
+        labelGrid.setText(element.get(1).getDescription());
+        imageGrid2.setImage(new Image(element.get(3).getPictureUrl()));
+        labelGrid2.setText(element.get(3).getDescription());
+        imageGrid3.setImage(new Image(element.get(4).getPictureUrl()));
+        labelGrid3.setText(element.get(4).getDescription());
+        imageGrid4.setImage(new Image(element.get(2).getPictureUrl()));
+        labelGrid4.setText(element.get(2).getDescription());
+        imageGrid5.setImage(new Image(element.get(5).getPictureUrl()));
+        labelGrid5.setText(element.get(5).getDescription());
+        imageGrid6.setImage(new Image(element.get(6).getPictureUrl()));
+        labelGrid6.setText(element.get(6).getDescription());
+        imageGrid7.setImage(new Image(element.get(7).getPictureUrl()));
+        labelGrid7.setText(element.get(7).getDescription());
+        imageGrid8.setImage(new Image(element.get(8).getPictureUrl()));
+        labelGrid8.setText(element.get(8).getDescription());
     }
 
 }

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="631.0" prefWidth="1000.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.BonPlanWindowController">
+<BorderPane prefHeight="631.0" prefWidth="1000.0" stylesheets="@/styles/styles.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.unice.polytech.si3.ihm.controller.ProductWindowController">
     <left>
         <VBox id="productVbox" prefHeight="500.0" prefWidth="151.0" BorderPane.alignment="CENTER">
             <children>
@@ -46,7 +46,7 @@
                     <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                             <children>
-                                <Label fx:id="labelGrid1" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid1" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="96.0" prefWidth="187.0" text="" wrapText="true" />
                                 <ImageView fx:id="imageGrid1" fitHeight="111.0" fitWidth="191.0" layoutX="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                     </image>
@@ -59,7 +59,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="98.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="98.0" prefHeight="96.0" prefWidth="179.0" text="" wrapText="true" />
                             </children>
                         </Pane>
                         <Pane prefHeight="155.0" prefWidth="205.0" GridPane.rowIndex="1">
@@ -68,7 +68,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid3" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid3" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="96.0" prefWidth="187.0" text="" wrapText="true" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -77,12 +77,12 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid4" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid4" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="188.0" text="" wrapText="true" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                             <children>
-                                <Label fx:id="labelGrid2" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid2" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="97.0" prefWidth="191.0" text="" wrapText="true" />
                                 <ImageView fx:id="imageGrid2" fitHeight="111.0" fitWidth="191.0" layoutX="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
                                     </image>
@@ -95,7 +95,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid5" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid5" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="97.0" prefWidth="187.0" text="" wrapText="true" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
@@ -104,7 +104,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid6" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid6" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="94.0" prefWidth="188.0" text="" wrapText="true" />
                             </children>
                         </Pane>
                         <Pane layoutX="213.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
@@ -113,7 +113,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid7" alignment="CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid7" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="101.0" prefHeight="95.0" prefWidth="188.0" text="" />
                             </children>
                         </Pane>
                         <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
@@ -122,7 +122,7 @@
                                     <image>
                                     </image>
                                 </ImageView>
-                                <Label fx:id="labelGrid8" alignment="CENTER" contentDisplay="CENTER" layoutY="99.0" prefHeight="50.0" prefWidth="150.0" text="" />
+                                <Label fx:id="labelGrid8" alignment="TOP_CENTER" contentDisplay="CENTER" layoutY="99.0" prefHeight="98.0" prefWidth="188.0" text="" />
                             </children>
                         </Pane>
                     </children>
@@ -143,16 +143,6 @@
                         <Insets left="2.0" top="10.0" />
                     </padding>
                 </Label>
-                <ImageView fx:id="haut" fitHeight="114.0" fitWidth="44.0" layoutX="600.0" layoutY="14.0" onMouseClicked="#haut" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: invisible">
-                    <image>
-                        <Image url="@../images/haut.png" />
-                    </image>
-                </ImageView>
-                <ImageView fitHeight="114.0" fitWidth="44.0" layoutX="600" layoutY="457.0" onMouseClicked="#bas" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@../images/bas.png" />
-                    </image>
-                </ImageView>
             </children>
         </Pane>
     </center>
